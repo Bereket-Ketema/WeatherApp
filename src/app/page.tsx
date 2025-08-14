@@ -56,7 +56,7 @@ useEffect(() => {
           const forecastData = await forecastRes.json();
 
          const dailyForecast = forecastData.list.filter((item: ForecastItem) =>
-        item.dt_txt.includes("12:00:00")
+        item.dt_txt.includes("06:00:00")
       );
           setForecast(dailyForecast);
         }
@@ -95,7 +95,7 @@ useEffect(() => {
 
         // Pick 1 forecast per day (at 12:00 PM)
         const dailyForecast = forecastData.list.filter((item: ForecastItem) =>
-        item.dt_txt.includes("12:00:00")
+        item.dt_txt.includes("06:00:00")
       );
 
         setForecast(dailyForecast);
